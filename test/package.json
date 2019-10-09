@@ -1,0 +1,70 @@
+{
+  "name": "test",
+  "version": "0.0.0",
+  "private": true,
+  "description": "",
+  "keywords": [
+    "test",
+    "lit-element",
+    "lit-html",
+    "polymer",
+    "typescript",
+    "web-components"
+  ],
+  "homepage": "",
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "license": "MIT",
+  "author": {
+    "name": "Daniel Rojo",
+    "email": "danielrojo@gmail.com",
+    "url": "https://github.com/rojaldo"
+  },
+  "files": [
+    "dist/*.d.ts.map",
+    "dist/*.d.ts",
+    "dist/*.js.map",
+    "dist/*.js"
+  ],
+  "main": "./dist/my-element.js",
+  "module": "./dist/my-element.js",
+  "typings": "./dist/my-element.d.ts",
+  "scripts": {
+    "build": "npm run ts -- -p tsconfig.prod.json",
+    "clean": "shx rm -rf dist/",
+    "lint": "npm run lint:debug -- --config tslint.prod.json",
+    "lint:debug": "tslint --project tsconfig.json --format stylish",
+    "prepublishOnly": "npm run lint && npm run build",
+    "test": "npm run lint && npm run ts && wct --config-file wct.config.json",
+    "test:ci": "wct --config-file wct.config.ci.json",
+    "test:sl": "wct --config-file wct.config.sl.json",
+    "ts": "npm run clean && tsc",
+    "watch": "npm run ts -- --watch"
+  },
+  "dependencies": {
+    "lit-element": "^2.2.1",
+    "lit-html": "^1.1.2",
+    "tslib": "^1.10.0"
+  },
+  "devDependencies": {
+    "@reallyland/tsconfig": "^1.0.0",
+    "@reallyland/tslint-config": "^1.1.1",
+    "@types/chai": "^4.2.1",
+    "@types/mocha": "^5.2.7",
+    "chai": "^4.2.0",
+    "mocha": "^6.2.0",
+    "shx": "^0.3.2",
+    "tslint": "^5.19.0",
+    "typescript": "^3.6.2",
+    "wct-mocha": "^1.0.1"
+  },
+  "engines": {
+    "node": ">= 8.16.0",
+    "npm": ">= 6.4.1"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}
