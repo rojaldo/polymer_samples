@@ -17,5 +17,12 @@
   },
   "resolutions": {
     "@webcomponents/webcomponentsjs": "1.0.20"
+  },
+  "devDependencies": {
+    "jasmine-core": "^3.5.0",
+    "karma": "^4.3.0",
+    "karma-chrome-launcher": "^3.1.0",
+    "karma-jasmine": "^2.0.1",
+    "requirejs": "^2.3.6"
   }
 }

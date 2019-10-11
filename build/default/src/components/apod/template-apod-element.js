@@ -1,8 +1,6 @@
-import { html } from '@polymer/polymer/polymer-element.js';
-import '@polymer/iron-ajax/iron-ajax.js';
-
-export const template =
-  html`
+import { html } from "../../../node_modules/@polymer/polymer/polymer-element.js";
+import "../../../node_modules/@polymer/iron-ajax/iron-ajax.js";
+export const template = html`
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
     integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
