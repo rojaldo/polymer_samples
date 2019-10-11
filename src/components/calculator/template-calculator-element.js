@@ -7,5 +7,5 @@ export const template =
         }
       </style>
       <display-element mydisplay="[[display]]"></display-element>
-      <keyboard-element output="[[input]]" display></keyboard-element>
+      <keyboard-element on-output="_handleChange" display="{{disp}}"></keyboard-element>
     `;

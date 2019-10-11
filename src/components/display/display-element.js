@@ -23,8 +23,9 @@ class DisplayElement extends PolymerElement {
 
   static get properties() {
     return {
-      mydisplay: String
-
+      mydisplay: {
+        type: String
+      }
     }
   }
 
