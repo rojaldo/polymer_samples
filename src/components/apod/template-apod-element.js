@@ -13,5 +13,18 @@ export const template =
         on-response="_handleResponse"
         debounce-duration="300">
     </iron-ajax>
-  <p>[[responseString]]</p>
+    <div class="container">
+    <div class="jumbotron">
+        <h1 class="display-3">[[response.title]]</h1>
+        <p class="lead">[[response.date]]</p>
+        <hr class="my-2">
+        <img src="[[response.url]]" style="width: 100%" alt="">
+        <p class="lead">
+        [[response.explanation]]
+        </p>
+    </div>
+</div>
+
+
+<p>[[responseString]]</p>
     `;
